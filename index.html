@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Системы охлаждения — подбор и сопровождение</title>
+
+    <!--
+      ВАЖНО:
+      • Весь CSS находится ниже в теге <style>
+      • При желании его можно вынести в отдельный файл style.css
+      • Все картинки заменяются простым изменением файлов в папке /img
+    -->
+
+    <style>
+        :root {
+            --blue: #0b5ed7;
+            --light-blue: #e9f2ff;
+            --dark: #1f2933;
+            --gray: #6b7280;
+            --white: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: var(--dark);
+            background-color: var(--white);
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #0b5ed7, #1e88e5);
+            color: white;
+            padding: 80px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: var(--gray);
+            margin-bottom: 15px;
+        }
+
+        .hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .hero-text p {
+            color: #e5e7eb;
+            font-size: 18px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: white;
+            color: var(--blue);
+            padding: 15px 30px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        section {
+            padding: 80px 20px;
+        }
+
+        .light {
+            background-color: var(--light-blue);
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+        }
+
+        .icon {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 15px;
+        }
+
+        .work-list li {
+            margin-bottom: 10px;
+            color: var(--gray);
+        }
+
+        footer {
+            background-color: #0f172a;
+            color: white;
+            padding: 40px 20px;
+        }
+
+        footer p {
+            color: #cbd5f5;
+        }
+
+        @media (max-width: 900px) {
+            .hero {
+                grid-template-columns: 1fr;
+            }
+
+            .grid-3 {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ГЛАВНЫЙ ЭКРАН -->
+<header>
+    <div class="container hero">
+        <div class="hero-text">
+            <h1>Системы охлаждения, подбор, сопровождение, консультации</h1>
+            <p>
+                Инженерный подход к системам холодоснабжения.
+                Экономия времени и бюджета Заказчика за счёт оптимальных технических решений.
+            </p>
+            <a href="#contacts" class="btn">Оставить заявку</a>
+        </div>
+        <div>
+            <!-- ЗАМЕНИТЬ КАРТИНКУ -->
+            <img src="img/hero-cooling.png" alt="Система холодоснабжения" style="width:100%; border-radius:12px;">
+        </div>
+    </div>
+</header>
+
+<!-- ПРЕИМУЩЕСТВА -->
+<section>
+    <div class="container">
+        <h2>Преимущества</h2>
+        <div class="grid-3">
+            <div class="card">
+                <img src="img/icon-experience.png" class="icon" alt="Опыт">
+                <h3>Практический опыт</h3>
+                <p>Более 5 лет работы в области систем холодоснабжения и десятки реализованных проектов.</p>
+            </div>
+            <div class="card">
+                <img src="img/icon-market.png" class="icon" alt="Рынок">
+                <h3>Знание рынка</h3>
+                <p>Глубокое понимание оборудования, производителей и технических решений.</p>
+            </div>
+            <div class="card">
+                <img src="img/icon-economy.png" class="icon" alt="Экономия">
+                <h3>Экономия ресурсов</h3>
+                <p>Снижение капитальных и эксплуатационных затрат без потери надёжности.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ВИДЫ РАБОТ -->
+<section class="light">
+    <div class="container">
+        <h2>Проектный подход к системам холодоснабжения</h2>
+        <p>
+            Работа ведётся в логике инженерного проекта с учётом нормативных требований,
+            этапности и последующей реализации. Используются профессиональные термины
+            с краткими пояснениями для удобства Заказчика.
+        </p>
+        <div class="grid-3" style="margin-top:40px;">
+            <div class="card">
+                <h3>Предпроект</h3>
+                <p><strong>Предварительный этап</strong>, на котором анализируются исходные данные объекта,
+                формируются возможные варианты систем холодоснабжения и оцениваются ключевые ограничения.</p>
+            </div>
+            <div class="card">
+                <h3>ОТР и ТЭО</h3>
+                <p><strong>ОТР</strong> — основные технические решения. <strong>ТЭО</strong> — упрощённое
+                технико-экономическое обоснование для сравнения вариантов по стоимости, эксплуатации и окупаемости.</p>
+            </div>
+            <div class="card">
+                <h3>Проектирование стадий П и Р</h3>
+                <p><strong>Стадия П</strong> — проектная документация. <strong>Стадия Р</strong> — рабочая документация.
+                Сопровождение проектирования и взаимодействие с подрядчиками и поставщиками оборудования.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ЭТАПЫ РАБОТЫ (ИНТЕРАКТИВНАЯ СХЕМА) -->
+<section>
+    <div class="container">
+        <h2>Этапы работы над проектом</h2>
+        <p>Инженерная логика ведения проекта холодоснабжения — от исходных данных до реализации.</p>
+
+        <div class="project-steps">
+            <div class="step">1. Исходные данные<br><span>Анализ объекта, режимов работы, требований Заказчика</span></div>
+            <div class="step">2. Формирование ТЗ<br><span>Подготовка или корректировка технического задания</span></div>
+            <div class="step">3. Подбор вариантов<br><span>Формирование нескольких технических решений</span></div>
+            <div class="step">4. ОТР + ТЭО<br><span>Сравнение решений по стоимости и эксплуатации</span></div>
+            <div class="step">5. Выбор решения<br><span>Оптимальное соотношение цена / надёжность</span></div>
+            <div class="step">6. Сопровождение<br><span>Проектирование П и Р, работа с подрядчиками</span></div>
+        </div>
+    </div>
+</section>
+
+<style>
+.project-steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.step {
+    background: white;
+    border: 2px solid #e5efff;
+    border-radius: 14px;
+    padding: 25px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.step span {
+    display: block;
+    font-weight: normal;
+    color: #6b7280;
+    margin-top: 10px;
+}
+
+.step:hover {
+    border-color: #0b5ed7;
+    box-shadow: 0 15px 30px rgba(11,94,215,0.15);
+    transform: translateY(-4px);
+}
+
+@media (max-width: 900px) {
+    .project-steps {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+
+<!-- КОНТАКТЫ -->
+<footer id="contacts">
+    <div class="container">
+        <h2>Контакты</h2>
+        <p>Email: info@company.ru</p>
+        <a href="mailto:info@company.ru" class="btn">Оставить заявку</a>
+    </div>
+</footer>
+
+</body>
+</html>
