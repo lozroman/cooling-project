@@ -139,6 +139,52 @@
                 grid-template-columns: 1fr;
             }
         }
+/* ===== МОДАЛЬНОЕ ОКНО ===== */
+.modal{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.6);
+    z-index:1000;
+}
+
+.modal-content{
+    background:#fff;
+    max-width:420px;
+    margin:8% auto;
+    padding:30px;
+    border-radius:10px;
+    position:relative;
+}
+
+.modal-content h2{margin-bottom:20px}
+
+.modal-content input{
+    width:100%;
+    padding:10px;
+    margin-bottom:12px;
+    border:1px solid #ccc;
+    border-radius:4px;
+}
+
+.modal-content button{
+    width:100%;
+    padding:12px;
+    background:var(--blue);
+    color:#fff;
+    border:none;
+    border-radius:4px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.close{
+    position:absolute;
+    right:15px;
+    top:10px;
+    font-size:22px;
+    cursor:pointer;
+}
     </style>
 </head>
 <body>
@@ -206,7 +252,7 @@
                 формируются возможные варианты систем холодоснабжения и оцениваются ключевые ограничения.На этом этапе формируется более детальная расщиренная смета по оборудованию и материалам.</p>
             </div>
             <div class="card">
-                <h3>Проектирование стадий П и Р</h3>
+                <h3>Проектирование стадий ПД и РД</h3>
                 <p><strong>Стадия П</strong> — проектная документация. <p><strong>Стадия Р</strong> — рабочая документация.
                 Сопровождение проектирования и взаимодействие с подрядчиками и поставщиками оборудования.</p>
             </div>
@@ -271,13 +317,34 @@
 
 <!-- КОНТАКТЫ -->
 <footer id="contacts">
-    <div class="container">
-        <h2>Контакты</h2>
-        <p>Email: info@cooling-consalt.ru</p>
-	<p>Работаем по всей России.</p>
-        <a href="mailto:info@company.ru" class="btn">Оставить заявку</a>
-    </div>
+<div class="container">
+<h2>Контакты</h2>
+<p>Email: info@cooling-consalt.ru</p>
+<p>Работаем по всей России</p>
+<button class="btn" onclick="openModal()">Оставить заявку</button>
+</div>
 </footer>
+<!-- МОДАЛЬНАЯ ФОРМА -->
+<div id="modal" class="modal">
+<div class="modal-content">
+<span class="close" onclick="closeModal()">×</span>
+<h2>Оставить заявку</h2>
+
+<form action="mailto:info@cooling-consalt.ru" method="post" enctype="text/plain">
+<input type="text" name="fio" placeholder="ФИО" required>
+<input type="tel" name="phone" placeholder="Телефон" required>
+<input type="email" name="email" placeholder="Почта" required>
+<input type="text" name="company" placeholder="Организация">
+<button type="submit">Отправить</button>
+</form>
+
+</div>
+</div>
+
+<script>
+function openModal(){document.getElementById("modal").style.display="block"}
+function closeModal(){document.getElementById("modal").style.display="none"}
+</script>
 
 </body>
 </html>
